@@ -1,0 +1,19 @@
+{
+  "name": "webflix",
+  "version": "1.0.0",
+  "description": "Netflix Clone",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayhan1109/Webflix.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jayhan1109/Webflix/issues"
+  },
+  "homepage": "https://github.com/jayhan1109/Webflix#readme"
+}
