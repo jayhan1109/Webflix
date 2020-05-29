@@ -4,6 +4,7 @@ $black-color: #000;
 $gray-border-color: #222;
 $gray-color: #555;
 $question-color: #303030;
+
 @mixin primary-button {
   text-decoration: none;
   color: $white-color;
@@ -12,4 +13,22 @@ $question-color: #303030;
   border-radius: 0.5rem;
   font-size: 1.2rem;
   padding: 0.7rem 1rem;
+}
+
+@mixin mobile {
+  @media (min-width: 0px) and (max-width: 660px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 660px) and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 992px) {
+    @content;
+  }
 }

@@ -60,3 +60,72 @@
     margin-top: 2rem;
   }
 }
+
+@include tablet {
+  .jumbotron {
+    &-main {
+      font-size: 3.3rem;
+    }
+
+    &-sub {
+      font-size: 1.4rem;
+      margin: 1rem 0;
+    }
+
+    &-email {
+      &-form {
+        min-width: 500px;
+      }
+
+      &-input {
+        font-size: 1.4rem;
+      }
+
+      &-btn {
+        font-size: 1rem;
+      }
+    }
+
+    &-foot {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include mobile {
+  .jumbotron {
+    &-main {
+      font-size: 3rem;
+    }
+
+    &-sub {
+      font-size: 1.2rem;
+    }
+
+    &-email {
+      min-height: 100px;
+
+      &-form {
+        flex-direction: column;
+      }
+
+      &-input {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        width: 60%;
+        max-height: 40px;
+      }
+
+      &-btn {
+        font-size: 1rem;
+        width: 60%;
+        padding: 0;
+        height: 30px;
+      }
+    }
+
+    &-foot {
+      display: none;
+    }
+  }
+}

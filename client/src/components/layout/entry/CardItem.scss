@@ -44,3 +44,45 @@
     left: 13%;
   }
 }
+
+@include tablet {
+  .txt {
+    &-main {
+      font-size: 3rem;
+    }
+
+    &-sub {
+      font-size: 1.4rem;
+    }
+  }
+}
+@include mobile {
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    margin-left: 0;
+
+    .col {
+      margin-right: auto;
+    }
+
+    .s6 {
+      width: 100% !important;
+    }
+  }
+
+  .txt {
+    align-items: center;
+    text-align: center;
+
+    &-main {
+      font-size: 2.7rem;
+    }
+
+    &-sub {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import "./Entry.scss";
 import Jumbotron from "./Jumbotron";
 import Cards from "./Cards";
 import Questions from "./Questions";
+import Contact from "./Contact";
 
 const Entry = () => {
   return (
@@ -15,6 +16,7 @@ const Entry = () => {
       </div>
       <Cards />
       <Questions />
+      <Contact />
     </div>
   );
 };

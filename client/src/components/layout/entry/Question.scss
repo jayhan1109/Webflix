@@ -24,3 +24,27 @@
     white-space: pre-wrap;
   }
 }
+
+@include tablet {
+  .faq {
+    &-title {
+      font-size: 1.5rem;
+    }
+
+    &-sub {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@include mobile {
+  .faq {
+    &-title {
+      font-size: 1.2rem;
+    }
+
+    &-sub {
+      font-size: 1rem;
+    }
+  }
+}

@@ -36,23 +36,26 @@ const Questions = () => {
     },
   ];
   return (
-    <div className="container">
-      <div className="question">
-        <p className="question-main">Frequently Asked Questions</p>
-        {questions.map((question) => (
-          <Question question={question} />
-        ))}
-        <form className="question-form">
-          <input
-            className="question-form-input"
-            type="email"
-            placeholder="Email address"
-          />
-          <button className="question-form-btn">TRY 30 DAYS FREE ></button>
-        </form>
-        <p className="question-foot">
-          Ready to watch? Enter your email to create or restart your membership.
-        </p>
+    <div className="question-border">
+      <div className="container">
+        <div className="question">
+          <p className="question-main">Frequently Asked Questions</p>
+          {questions.map((question, index) => (
+            <Question question={question} key={index} />
+          ))}
+          <form className="question-form">
+            <input
+              className="question-form-input"
+              type="email"
+              placeholder="Email address"
+            />
+            <button className="question-form-btn">TRY 30 DAYS FREE ></button>
+          </form>
+          <p className="question-foot">
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </p>
+        </div>
       </div>
     </div>
   );

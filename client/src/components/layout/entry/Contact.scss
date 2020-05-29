@@ -1,0 +1,49 @@
+.contact {
+  color: $gray-color;
+  width: 100%;
+  margin-top: 3rem;
+
+  &-title {
+    font-size: 1.2rem;
+  }
+
+  &-menus {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    min-width: 25%;
+    margin-top: 1.3rem;
+  }
+
+  &-country {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+  }
+
+  &-credit {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@include mobile {
+  .contact {
+    li {
+      min-width: 33.3333%;
+      font-size: 0.8rem;
+    }
+
+    &-country {
+      font-size: 1rem;
+    }
+
+    &-credit {
+      font-size: 0.7rem;
+    }
+  }
+}
