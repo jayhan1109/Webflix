@@ -1,11 +1,9 @@
 import React from "react";
+import "./App.scss";
+import Entry from "./components/layout/entry/Entry";
 
 const App = () => {
-  return (
-    <div>
-      <h1>Hello</h1>
-    </div>
-  );
+  return <Entry />;
 };
 
 export default App;
