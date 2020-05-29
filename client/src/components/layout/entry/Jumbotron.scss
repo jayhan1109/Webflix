@@ -1,12 +1,12 @@
 .jumbotron {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: $white-color;
   text-align: center;
+  flex: 1;
 
   &-main {
     font-size: 3.5rem;

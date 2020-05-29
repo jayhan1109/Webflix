@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 
 import "./Entry.scss";
 import Jumbotron from "./Jumbotron";
+import Cards from "./Cards";
 
 const Entry = () => {
   return (
@@ -11,6 +12,7 @@ const Entry = () => {
         <Navbar />
         <Jumbotron />
       </div>
+      <Cards />
     </div>
   );
 };
