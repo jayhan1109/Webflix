@@ -4,8 +4,6 @@ import "./CardItem.scss";
 const CardItem = ({ item, num }) => {
   const { main, sub, img, vid } = item;
 
-  console.log(num);
-
   if (num % 2 === 0) {
     return (
       <div className="card">

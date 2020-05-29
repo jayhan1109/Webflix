@@ -1,0 +1,26 @@
+.faq {
+  width: 95%;
+
+  &-title {
+    background: $question-color;
+    text-align: start;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+
+    &-main {
+      flex: 1;
+    }
+  }
+
+  &-sub {
+    background: $question-color;
+    text-align: start;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    margin-top: -0.3rem;
+    margin-bottom: 0.5rem;
+    white-space: pre-wrap;
+  }
+}

@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import "./Entry.scss";
 import Jumbotron from "./Jumbotron";
 import Cards from "./Cards";
+import Questions from "./Questions";
 
 const Entry = () => {
   return (
@@ -13,6 +14,7 @@ const Entry = () => {
         <Jumbotron />
       </div>
       <Cards />
+      <Questions />
     </div>
   );
 };
