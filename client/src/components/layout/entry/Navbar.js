@@ -6,8 +6,12 @@ const Navbar = () => {
     <nav className="nav">
       <h2 className="nav-title">NETFLIX</h2>
       <div className="nav-links">
-        <a href="#">Register</a>
-        <a href="#">Login</a>
+        <a className="nav-auth" href="#">
+          Register
+        </a>
+        <a className="nav-auth" href="#">
+          Login
+        </a>
       </div>
     </nav>
   );
