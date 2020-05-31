@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://jungho1109:wjdgh123123@webflix-2d7ko.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "jsonwebtokensecret"
+}
