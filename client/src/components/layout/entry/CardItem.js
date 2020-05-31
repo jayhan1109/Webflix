@@ -11,7 +11,7 @@ const CardItem = ({ item, num }) => {
           <div className="row">
             <div className="col s6">
               <div className="media">
-                <img src={img} className="media-img" />
+                <img src={img} className="media-img" alt="" />
                 <video className="media-vid" autoPlay playsInline muted loop>
                   <source src={vid} />
                 </video>
@@ -41,7 +41,7 @@ const CardItem = ({ item, num }) => {
           </div>
           <div className="col s6">
             <div className="media">
-              <img src={img} className="media-img" />
+              <img src={img} className="media-img" alt="" />
               <video className="media-vid" autoPlay playsInline muted loop>
                 <source src={vid} />
               </video>

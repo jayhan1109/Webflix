@@ -2,6 +2,7 @@ $primary-color: #e50914;
 $white-color: #fff;
 $black-color: #000;
 $gray-border-color: #222;
+$light-gray-color: #ccc;
 $gray-color: #555;
 $question-color: #303030;
 
@@ -13,6 +14,42 @@ $question-color: #303030;
   border-radius: 0.5rem;
   font-size: 1.2rem;
   padding: 0.7rem 1rem;
+}
+
+@mixin input-style {
+  text-decoration: none;
+  color: $white-color;
+  background-color: $gray-color;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+}
+
+@mixin desktop-font-main {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+@mixin desktop-font-sub {
+  font-size: 1.7rem;
+}
+
+@mixin tablet-font-main {
+  font-size: 3.3rem;
+}
+
+@mixin tablet-font-sub {
+  font-size: 1.4rem;
+}
+
+@mixin mobile-font-main {
+  font-size: 3rem;
+}
+
+@mixin mobile-font-sub {
+  font-size: 1.2rem;
 }
 
 @mixin mobile {

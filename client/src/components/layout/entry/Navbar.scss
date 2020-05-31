@@ -12,6 +12,23 @@
     flex: 1;
   }
 
+  &-logo {
+    text-decoration: none;
+
+    &:active {
+      color: $primary-color;
+    }
+
+    &:-webkit-any-link {
+      color: $primary-color;
+    }
+
+    &:focus {
+      color: $primary-color;
+      outline: none;
+    }
+  }
+
   &-links {
     display: flex;
     justify-content: center;
