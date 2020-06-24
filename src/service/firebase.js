@@ -16,4 +16,21 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
+// Configure FirebaseUI.
+export const uiConfig = {
+  credentialHelper: "none",
+  // Popup signin flow rather than redirect flow.
+  signInFlow: "popup",
+  // We will display Google and Facebook as auth providers.
+  signInOptions: [
+    firebase.auth.EmailAuthProvider.PROVIDER_ID,
+    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+  ],
+  callbacks: {
+    // Avoid redirects after sign-in.
+    signInSuccessWithAuthResult: () => false,
+  },
+};
+
 export default firebase;

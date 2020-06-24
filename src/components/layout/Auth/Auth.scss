@@ -48,7 +48,7 @@
           margin-bottom: 3rem;
         }
 
-        &-signup {
+        &-auth {
           display: flex;
           flex-direction: column;
           width: 80%;
@@ -70,20 +70,6 @@
             margin-top: 3rem;
           }
         }
-
-        &-foot {
-          color: $light-gray-color;
-
-          &-link {
-            color: $white-color;
-            margin-left: 0.3rem;
-            text-decoration: none;
-
-            &:hover {
-              text-decoration: underline;
-            }
-          }
-        }
       }
     }
   }
@@ -101,7 +87,7 @@
             font-size: 1.7rem;
           }
 
-          &-signup {
+          &-auth {
             input {
               font-size: 1rem;
             }
@@ -112,13 +98,6 @@
 
             &-btn {
               font-size: 0.8rem;
-            }
-          }
-
-          &-foot {
-            font-size: 0.7rem;
-            &-link {
-              font-size: 0.6rem;
             }
           }
         }

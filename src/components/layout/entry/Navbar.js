@@ -12,11 +12,8 @@ const Navbar = () => {
       </h2>
       {useLocation().pathname === "/" && (
         <div className="nav-links">
-          <NavLink className="nav-auth" to="/register">
-            Register
-          </NavLink>
-          <NavLink className="nav-auth" to="/login">
-            Login
+          <NavLink className="nav-auth" to="/auth">
+            Sign In
           </NavLink>
         </div>
       )}
