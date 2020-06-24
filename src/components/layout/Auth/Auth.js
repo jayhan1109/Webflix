@@ -16,13 +16,6 @@ const Auth = () => {
             <div className="auth-main-1-container">
               <h2 className="auth-main-1-container-title">Sign In</h2>
               <form className="auth-main-1-container-auth">
-                <input type="email" name="email" placeholder="Email address" />
-                <input type="password" name="password" placeholder="Password" />
-                <input
-                  type="password"
-                  name="password2"
-                  placeholder="Confirm password"
-                />
                 <StyledFirebaseAuth
                   uiConfig={uiConfig}
                   firebaseAuth={firebase.auth()}
