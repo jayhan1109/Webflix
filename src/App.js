@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import "./firebaseui-styling.global.css";
 import Entry from "./components/layout/entry/Entry";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Auth from "./components/layout/Auth/Auth";

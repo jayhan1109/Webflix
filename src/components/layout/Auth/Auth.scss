@@ -51,17 +51,7 @@
         &-auth {
           display: flex;
           flex-direction: column;
-          width: 80%;
-
-          input {
-            @include input-style;
-            outline: none;
-          }
-
-          input::placeholder {
-            color: $light-gray-color;
-            font-size: 0.8rem;
-          }
+          width: 100%;
 
           &-btn {
             @include primary-button;

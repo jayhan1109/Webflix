@@ -1,0 +1,11 @@
+.mdl-button--raised.mdl-button--colored {
+  background-color: #e50914 !important;
+}
+
+.firebaseui-textfield.mdl-textfield .firebaseui-label:after {
+  background-color: #333 !important;
+}
+
+.mdl-button--primary.mdl-button--primary {
+  color: #e50914 !important;
+}
