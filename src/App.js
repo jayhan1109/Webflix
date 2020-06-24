@@ -6,6 +6,9 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Auth from "./components/layout/Auth/Auth";
 import Landing from "./components/layout/Landing/Landing";
 
+// Firebase
+import firebase from "./service/firebase";
+
 const App = () => {
   return (
     <BrowserRouter>
