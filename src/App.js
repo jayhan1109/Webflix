@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 import "./App.scss";
 import Entry from "./components/layout/entry/Entry";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -7,6 +8,11 @@ import Signup from "./components/layout/Auth/Signup";
 import Landing from "./components/layout/Landing/Landing";
 
 const App = () => {
+  useEffect(() => {
+    axios.get("/").then((data) => {
+      console.log(data);
+    });
+  }, []);
   return (
     <BrowserRouter>
       <Switch>
