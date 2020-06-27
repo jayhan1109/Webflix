@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./App.scss";
 import "./firebaseui-styling.global.css";
 import Entry from "./components/layout/entry/Entry";
@@ -6,11 +6,15 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Auth from "./components/layout/Auth/Auth";
 import Landing from "./components/layout/Landing/Landing";
 
+// Recoil
+import { useRecoilState } from "recoil";
+
 // Firebase
 import firebase from "./service/firebase";
+import { authState } from "./recoil/auth";
 
 const App = () => {
-  const [auth, setAuth] = useState(false);
+  const [auth, setAuth] = useRecoilState(authState);
 
   useEffect(() => {
     firebaseAuth();
@@ -27,14 +31,28 @@ const App = () => {
   };
 
   if (auth) {
-    return <Redirect exact to="/landing" />;
+    console.log("auth is true");
+  } else {
+    console.log("auth is false");
   }
 
   return (
     <Switch>
-      <Route exact path="/" component={Entry} />
-      <Route exact path="/auth" component={Auth} />
-      <Route exact path="/landing" component={Landing} />
+      <Route
+        exact
+        path="/"
+        render={() => (!auth ? <Entry /> : <Redirect to="/landing" />)}
+      />
+      <Route
+        exact
+        path="/auth"
+        render={() => (!auth ? <Auth /> : <Redirect to="/landing" />)}
+      />
+      <Route
+        exact
+        path="/landing"
+        render={() => (!auth ? <Redirect to="/" /> : <Landing />)}
+      />
     </Switch>
   );
 };
