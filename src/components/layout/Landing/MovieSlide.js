@@ -24,30 +24,46 @@ const MovieSlide = ({ title, movies }) => {
         renderButtonGroupOutside={false}
         renderDotsOutside={false}
         responsive={{
-          desktop: {
+          largescreen: {
             breakpoint: {
               max: 3000,
-              min: 1024,
+              min: 1300,
+            },
+            items: 6,
+            partialVisibilityGutter: 100,
+          },
+          desktop: {
+            breakpoint: {
+              max: 1300,
+              min: 1098,
             },
             items: 5,
-            partialVisibilityGutter: 70,
+            partialVisibilityGutter: 100,
+          },
+          bigtablet: {
+            breakpoint: {
+              max: 1098,
+              min: 840,
+            },
+            items: 4,
+            partialVisibilityGutter: 100,
           },
 
           tablet: {
             breakpoint: {
-              max: 1024,
-              min: 464,
+              max: 840,
+              min: 570,
             },
             items: 3,
-            partialVisibilityGutter: 30,
+            partialVisibilityGutter: 100,
           },
           mobile: {
             breakpoint: {
-              max: 464,
+              max: 570,
               min: 0,
             },
             items: 2,
-            partialVisibilityGutter: 30,
+            partialVisibilityGutter: 100,
           },
         }}
         showDots={false}
@@ -56,10 +72,14 @@ const MovieSlide = ({ title, movies }) => {
         swipeable
       >
         {movies.map((movie) => (
-          <img
-            src={`http://image.tmdb.org/t/p/w185/` + movie.backdrop_path}
-            alt="movie poster"
-          />
+          <a
+            href={`https://www.youtube.com/results?search_query=${movie.name}&page=&utm_source=opensearch`}
+          >
+            <img
+              src={`http://image.tmdb.org/t/p/w185/` + movie.backdrop_path}
+              alt="movie poster"
+            />
+          </a>
         ))}
       </Carousel>
       ;

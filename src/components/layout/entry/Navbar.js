@@ -1,12 +1,12 @@
 import React from "react";
 import "./Navbar.scss";
 import { useLocation, NavLink } from "react-router-dom";
-import { useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import { userNameState } from "../../../recoil/auth";
 import firebase from "../../../service/firebase";
 
 const Navbar = () => {
-  const [userName, setUserName] = useRecoilState(userNameState);
+  const userName = useRecoilValue(userNameState);
 
   return (
     <nav className="nav">
