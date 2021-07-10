@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./Question.scss";
 
 const Question = ({ question }) => {
+  // Destruct props
   const { main, sub } = question;
 
   let [toggleSub, setToggleSub] = useState(false);
 
+  // Toggle FAQ
   const toggleSubFunc = (e) => {
     setToggleSub(!toggleSub);
   };

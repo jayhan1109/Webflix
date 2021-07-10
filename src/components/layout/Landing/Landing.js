@@ -14,19 +14,27 @@ import MovieSlide from "./MovieSlide";
 import "./Landing.scss";
 
 const Landing = () => {
+  // Recoil States
+  const setUserName = useSetRecoilState(userNameState);
+  const [popularMovie, setPopularMovie] = useRecoilState(popularMovieState);
+  const [topMovie, setTopMovie] = useRecoilState(topRatedMovieState);
+  const [popularShows, setPopularShow] = useRecoilState(popularShowState);
+  const [topShow, setTopShow] = useRecoilState(topRatedShowState);
+
   useEffect(() => {
+    // Get username and store
     setUserName(firebase.auth().currentUser.displayName);
+
+    // Fetch data from Movie API when the component mounted
     getPopularMovies();
     getTopRatedMovies();
     getPopularShows();
     getTopRatedShows();
   }, []);
 
-  const setUserName = useSetRecoilState(userNameState);
-  const [popularMovie, setPopularMovie] = useRecoilState(popularMovieState);
-  const [topMovie, setTopMovie] = useRecoilState(topRatedMovieState);
-  const [popularShows, setPopularShow] = useRecoilState(popularShowState);
-  const [topShow, setTopShow] = useRecoilState(topRatedShowState);
+  /**
+   * Fetch Data with Movie API using axios
+   */
 
   const getPopularMovies = async () => {
     const res = await axios.get(process.env.REACT_APP_POPULAR_MOVIES);
@@ -40,7 +48,6 @@ const Landing = () => {
 
   const getPopularShows = async () => {
     const res = await axios.get(process.env.REACT_APP_POPULAR_SHOWS);
-    console.log(res);
     setPopularShow(res.data.results);
   };
 

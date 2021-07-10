@@ -4,6 +4,7 @@ import "react-multi-carousel/lib/styles.css";
 import "./MovieSlide.scss";
 
 const MovieSlide = ({ title, movies }) => {
+  console.log(movies);
   return (
     <Fragment>
       <h2>{title}</h2>

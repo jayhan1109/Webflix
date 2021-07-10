@@ -14,12 +14,15 @@ import firebase from "./service/firebase";
 import { authState } from "./recoil/auth";
 
 const App = () => {
+  // Recoil States
   const [auth, setAuth] = useRecoilState(authState);
 
   useEffect(() => {
+    // When "App" component is mounted, check if user logged in
     firebaseAuth();
   }, []);
 
+  // Check if user changed
   const firebaseAuth = () => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -29,12 +32,6 @@ const App = () => {
       }
     });
   };
-
-  if (auth) {
-    console.log("auth is true");
-  } else {
-    console.log("auth is false");
-  }
 
   return (
     <Switch>
